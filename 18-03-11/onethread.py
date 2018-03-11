@@ -1,3 +1,7 @@
+'''
+不使用线程
+'''
+
 from time import sleep, ctime
 
 
