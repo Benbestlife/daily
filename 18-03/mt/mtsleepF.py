@@ -1,4 +1,4 @@
-'''
+"""
 mtsleepF.py 应用派生了随机数量的线程,
 当每个线程执行结束时它会进行输出。
 
@@ -25,7 +25,7 @@ I/O 和访问相同的数据结构都属于临界区,因此需要用锁来防止
 这两个线程是当前线程(因为它还没结束),以及主线程(没有必要去显示)。
 
 如果只需要对当前运行的线程进行计数,那么可以使用 threading.active_count()来代替
-'''
+"""
 
 from atexit import register
 from random import randrange
@@ -45,14 +45,14 @@ remaining = CleanOutputSet()
 
 
 def loop(nsec):
-    '''
+    """
     使用 with 语句,此时每个对象的上下文管理器负责在进入该套件之前调用 acquire(),
     并在完成执行之后调用 release().
     with lock:
         remaining.add(myname)
         print('xxx')
     sleep(nsec)
-    '''
+    """
     myname = current_thread().name
     # 指明启动线程的输出操作是原子的(没有其他线程可以进入临界区)
     lock.acquire()  # 获得一个锁

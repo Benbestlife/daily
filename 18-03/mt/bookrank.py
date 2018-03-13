@@ -1,4 +1,4 @@
-'''
+"""
 atexit.register()函数来告知脚本何时结束
 
 它是什么呢?
@@ -18,7 +18,7 @@ atexit.register()函数来告知脚本何时结束
 有两个地方可以放置 print 语句:
 1.main()返回之后,
 2.或者使用 atexit.register()来注册一个退出函数。
-'''
+"""
 
 from atexit import register
 from threading import Thread

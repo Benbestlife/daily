@@ -1,11 +1,11 @@
-'''
+"""
 本例中将对 Thread 子类化,而不是直接对其实例化。
 这将使我们在定制线程对象时拥有更多的灵活性,也能够简化线程创建的调用过程。
 
 比较 mtsleepD 和 mstsleepE 的代码,其中的几个重要变化:
     1)MyThread子类的构造函数必须先调用其基类的构造函数;
     2)之前的特殊方法__call__()在这个子类中必须要写为 run()。
-'''
+"""
 import threading
 from time import sleep, ctime
 

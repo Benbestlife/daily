@@ -1,4 +1,4 @@
-'''
+"""
 与使用 thread 模块相比做了哪些修改?
     使用thread时实现的锁没有了,取而代之的是一组 Thread 对象。
     实例化每个 Thread 对象时,把函数(target)和参数(args)传进去,然后得到返回的 Thread 实例。
@@ -17,7 +17,7 @@
         如果主线程还有其他事情要去做,而不是等待这些线程完成(例如其他处理或者等待新的客户端请求),
         就可以不调用 join()。
         join()方法只有在你需要等待线程完成的时候才是有用的。
-'''
+"""
 
 import threading
 from time import sleep, ctime
